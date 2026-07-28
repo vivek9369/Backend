@@ -8,8 +8,8 @@ dotenv.config()
 
 let port = process.env.PORT || 4000
 app.use(express.json())
-app.use("/api", authRouter)
 app.use(cookieParser())
+app.use("/api", authRouter)
 
 const startServer = async () => {
     await connectDB()
